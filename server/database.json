@@ -1,0 +1,184 @@
+{
+  "customers": [
+    {
+      "id": 1,
+      "name": "Bruce",
+      "family_name": "Wayne",
+      "address": "W3 2AX",
+      "gold_quantity": 350,
+      "regular_customer": "true",
+      "last_purchase": "2015-03-25T12:00:00-06:30"
+    },
+    {
+      "id": 2,
+      "name": "Mary",
+      "family_name": "Jane",
+      "address": "30 Oxford St",
+      "gold_quantity": 40,
+      "regular_customer": "true",
+      "last_purchase": "2015-03-25T12:00:00-06:30"
+    },
+    {
+      "id": 3,
+      "name": "Tom",
+      "family_name": "Holland",
+      "address": "S2 5HG",
+      "gold_quantity": 15,
+      "regular_customer": "false",
+      "last_purchase": "2015-03-25T12:00:00-06:30"
+    },
+    {
+      "id": 4,
+      "name": "",
+      "family_name": "",
+      "address": "",
+      "gold_quantity": 5,
+      "regular_customer": "",
+      "last_purchase": "2015-03-25T12:00:00-06:30"
+    },
+    {
+      "id": 5,
+      "name": "",
+      "family_name": "",
+      "address": "",
+      "gold_quantity": 5,
+      "regular_customer": "",
+      "last_purchase": "2015-03-25T12:00:00-06:30"
+    },
+    {
+      "id": 6,
+      "name": "",
+      "family_name": "",
+      "address": "",
+      "gold_quantity": 5,
+      "regular_customer": "",
+      "last_purchase": "2015-03-25T12:00:00-06:30"
+    },
+    {
+      "id": 7,
+      "name": "",
+      "family_name": "",
+      "address": "",
+      "gold_quantity": 5,
+      "regular_customer": "",
+      "last_purchase": "2015-03-25T12:00:00-06:30"
+    },
+    {
+      "id": 8,
+      "name": "",
+      "family_name": "",
+      "address": "",
+      "gold_quantity": 5,
+      "regular_customer": "",
+      "last_purchase": "2015-03-25T12:00:00-06:30"
+    },
+    {
+      "id": 9,
+      "name": "",
+      "family_name": "",
+      "address": "",
+      "gold_quantity": 5,
+      "regular_customer": "",
+      "last_purchase": "2015-03-25T12:00:00-06:30"
+    },
+    {
+      "id": 10,
+      "name": "",
+      "family_name": "",
+      "address": "",
+      "gold_quantity": 5,
+      "regular_customer": "",
+      "last_purchase": "2015-03-25T12:00:00-06:30"
+    },
+    {
+      "id": 11,
+      "name": "",
+      "family_name": "",
+      "address": "",
+      "gold_quantity": 5,
+      "regular_customer": "",
+      "last_purchase": "2015-03-25T12:00:00-06:30"
+    },
+    {
+      "id": 12,
+      "name": "",
+      "family_name": "",
+      "address": "",
+      "gold_quantity": 5,
+      "regular_customer": "",
+      "last_purchase": "2015-03-25T12:00:00-06:30"
+    },
+    {
+      "id": 13,
+      "name": "",
+      "family_name": "",
+      "address": "",
+      "gold_quantity": 5,
+      "regular_customer": "",
+      "last_purchase": "2015-03-25T12:00:00-06:30"
+    },
+    {
+      "id": 14,
+      "name": "",
+      "family_name": "",
+      "address": "",
+      "gold_quantity": 5,
+      "regular_customer": "",
+      "last_purchase": "2015-03-25T12:00:00-06:30"
+    },
+    {
+      "id": 15,
+      "name": "",
+      "family_name": "",
+      "address": "",
+      "gold_quantity": 5,
+      "regular_customer": "",
+      "last_purchase": "2015-03-25T12:00:00-06:30"
+    },
+    {
+      "id": 16,
+      "name": "",
+      "family_name": "",
+      "address": "",
+      "gold_quantity": 5,
+      "regular_customer": "",
+      "last_purchase": "2015-03-25T12:00:00-06:30"
+    },
+    {
+      "id": 17,
+      "name": "",
+      "family_name": "",
+      "address": "",
+      "gold_quantity": 5,
+      "regular_customer": "",
+      "last_purchase": "2015-03-25T12:00:00-06:30"
+    },
+    {
+      "id": 18,
+      "name": "",
+      "family_name": "",
+      "address": "",
+      "gold_quantity": 5,
+      "regular_customer": "",
+      "last_purchase": "2015-03-25T12:00:00-06:30"
+    },
+    {
+      "id": 19,
+      "name": "",
+      "family_name": "",
+      "address": "",
+      "gold_quantity": 5,
+      "regular_customer": "",
+      "last_purchase": "2015-03-25T12:00:00-06:30"
+    },
+    {
+      "id": 20,
+      "name": "",
+      "family_name": "",
+      "address": "",
+      "gold_quantity": 5,
+      "regular_customer": "",
+      "last_purchase": "2015-03-25T12:00:00-06:30"
+    }
+  ]
+}

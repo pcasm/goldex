@@ -1,0 +1,17 @@
+<button id="goBackButton" mat-stroked-button (click)="closeDetail()">Go back</button>
+<div class="container d-flex justify-content-center mat-elevation-z0" *ngIf="selectedRow && allTableRows">
+  <div class="row">
+    <div class="col">
+      <mat-list>
+        <mat-list-item *ngFor="let key of allTableRows">
+          <p><strong>
+            {{key | formatKeys | titlecase}}:</strong> {{
+            key == 'last_purchase' ? (selectedRow[key] | date: 'dd/M/yyyy') :
+            key == 'regular_customer' ? (selectedRow[key] | yesOrNo) :
+            (selectedRow[key])}}
+          </p>
+        </mat-list-item>
+      </mat-list>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+<!--Table-->
+<div [hidden]="selectedRow">
+  <div class="container mat-elevation-z0">
+    <div class="row">
+      <div class="col">
+        <h4>Customer List App</h4>
+        <p>by Pau Casanellas</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <table mat-table [dataSource]="dataSource">
+          <ng-container *ngFor="let row of reducedTableRows" [matColumnDef]=row>
+            <mat-header-cell *matHeaderCellDef>
+              {{row | formatKeys | titlecase}}
+            </mat-header-cell>
+            <mat-cell *matCellDef="let item">
+              {{row == 'created' || row == 'modified' ? (item[row] | date: 'EEEE, MMMM d, y, H:mm:ss') : (item[row])}}
+            </mat-cell>
+          </ng-container>
+          <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+          <mat-row *matRowDef="let row; columns: displayedColumns" (click)="toggleView(row)"></mat-row>
+        </table>
+        <mat-paginator [pageSize]="5" [pageSizeOptions]="[5, 10, 25, 50, 100]" showFirstLastButtons></mat-paginator>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Element detail-->
+<app-detail [selectedRow]="selectedRow" [allTableRows]="allTableRows"
+            (goBackToTable)="toggleView()" *ngIf="selectedRow">
+</app-detail>

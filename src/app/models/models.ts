@@ -4,6 +4,6 @@ export interface Row {
   family_name: string;
   address: string;
   gold_quantity: number;
-  regular_customer: string;
+  regular_customer: boolean;
   last_purchase: string;
 }

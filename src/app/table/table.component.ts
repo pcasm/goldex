@@ -1,7 +1,9 @@
 import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
 import {MatPaginator, MatTableDataSource} from '@angular/material';
-import {Row} from '../models/models';
+import {Customer} from '../models/models';
 import {DatabaseService} from '../services/database.service';
+import {CustomersDatasource} from '../services/customers.datasource';
+import {delay, startWith, tap} from 'rxjs/operators';
 
 @Component({
   selector: 'app-table',
@@ -10,8 +12,8 @@ import {DatabaseService} from '../services/database.service';
 })
 export class TableComponent implements OnInit, AfterViewInit {
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
-  dataSource = new MatTableDataSource();
-  selectedRow: Row;
+  dataSource: CustomersDatasource;
+  customer: Customer;
   displayedColumns: string[] = [];
   reducedTableRows = [
     'id',
@@ -29,27 +31,37 @@ export class TableComponent implements OnInit, AfterViewInit {
   ];
 
   constructor(private databaseService: DatabaseService) {
-    this.displayedColumns = this.reducedTableRows;
   }
 
   ngOnInit() {
-    this.getCustomersList();
+    this.paginator.pageSize = 5;
+    this.paginator.pageIndex = 1;
+    this.dataSource = new CustomersDatasource(this.databaseService);
+    this.dataSource.loadCustomers(this.paginator.pageIndex, this.paginator.pageSize);
   }
 
-  toggleView(row?: Row) {
-    row ? this.selectedRow = row : this.selectedRow = null;
+  toggleView(selectedRow?: Customer) {
+    selectedRow ? this.customer = selectedRow : this.customer = null;
   }
 
-  getCustomersList() {
-    this.databaseService.getCustomersList()
-      .subscribe((data: any) => {
-          this.dataSource.data = data;
-        }, error => {}
-      );
-  }
+  ngAfterViewInit() {
+    this.dataSource.counter$
+      .pipe(
+        startWith(null),
+        delay(0),
+        tap((count) => {
+          this.paginator.length = count;
+        })
+      )
+      .subscribe();
 
-  ngAfterViewInit(): void {
-    this.dataSource.paginator = this.paginator;
+    this.paginator.page
+      .pipe(
+        startWith(null),
+        delay(0),
+        tap(() => this.dataSource.loadCustomers(this.paginator.pageIndex, this.paginator.pageSize))
+      )
+      .subscribe();
   }
 
 }

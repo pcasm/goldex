@@ -1,4 +1,4 @@
-export interface Row {
+export interface Customer {
   id: number;
   name: string;
   family_name: string;

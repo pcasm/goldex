@@ -4,9 +4,9 @@
     <div class="col">
       <mat-list>
         <mat-list-item *ngFor="let key of allTableRows">
-          <p><strong>
-            {{key | formatKeys | titlecase}}:</strong> {{
-            key == 'last_purchase' ? (selectedRow[key] | date: 'dd/M/yyyy') :
+          <p>
+            <strong>{{key | formatKeys | titlecase}}:</strong>
+            {{key == 'last_purchase' ? (selectedRow[key] | date: 'dd/M/yyyy') :
             key == 'regular_customer' ? (selectedRow[key] | yesOrNo) :
             (selectedRow[key])}}
           </p>
